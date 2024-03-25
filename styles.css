@@ -1,0 +1,73 @@
+@ -0,0 +1,72 @@
+*{
+    text-decoration: none;
+  }
+  body{
+    margin:0;
+  }
+  .navbar{
+    background: lightgray; 
+    font-family: calibri; 
+    padding-right:15px;
+    padding-left:15px;
+    display: flex; 
+    align-items:center; 
+    justify-content: space-between;
+  }
+    .navbar ul{
+        display: flex;
+    }
+  li{
+    list-style: none; 
+    display: inline-block;
+  }
+  li a{
+    color: black; 
+    font-size:20px; 
+    font-weight: bold; 
+    margin-right: 20px;
+  }
+
+/* PLACEMENTS */
+.hero-container {
+    position: relative;
+}
+
+.bottomright {
+    background-color: rgba(34, 34, 34,0.7);
+    padding:2%;
+    position: absolute;
+    bottom: 8px;
+    right: 0;
+    font-size: 24px;
+    color:white;
+}
+.vertical-text{
+    writing-mode: vertical-rl;
+    color:#1e1e1e;
+    opacity:0.7;
+}
+.headers {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 100px;
+    font-size: 64px;
+}
+
+img { 
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+    padding: 0px 50px 0px 100px;
+}
+
+.square {
+    height: 200px;
+    width: 500px;
+    background-color: #222;
+    opacity: 0.7;
+    position: absolute;
+    bottom: -100px;
+    right: 16px;
+}
