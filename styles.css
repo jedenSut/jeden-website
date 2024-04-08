@@ -5,13 +5,14 @@
     margin:0;
   }
   .navbar{
-    background: lightgray; 
-    font-family: calibri; 
+    background: rgb(255, 255, 255); 
+    font-family: Arial, Helvetica, sans-serif; 
     padding-right:15px;
     padding-left:15px;
     display: flex; 
     align-items:center; 
     justify-content: space-between;
+    animation: fade-down 2s;
   }
     .navbar ul{
         display: flex;
@@ -21,11 +22,16 @@
     display: inline-block;
   }
   li a{
-    color: black; 
-    font-size:20px; 
-    font-weight: bold; 
-    margin-right: 20px;
+    color: rgb(42, 41, 41); 
+    font-size:16px;
+    opacity:0.5;
+    margin-right: 40px;
+    transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
   }
+  li:hover a {
+    color: black;
+    opacity: 1;
+}
 
 /* PLACEMENTS */
 .hero-container {
@@ -35,55 +41,61 @@
 }
 
 .bottomright {
-    background-color: rgba(34, 34, 34,0.7);
+    background-color: rgb(27, 27, 27,0.9);
+    font-family: "Poppins", sans-serif;
+    font-weight: lighter;
     padding:2%;
     position: absolute;
-    bottom: 8px;
+    bottom: 40px;
     right: 0;
     font-size: 24px;
-    color:white;
+    color:rgb(255, 255, 255);
+    animation: fade-down 1.8s 0.2s backwards;
 }
+
 .vertical-text{
     writing-mode: vertical-rl;
-    color:#1e1e1e;
+    color:#434343;
+    font-size: 24px;
     opacity:0.7;
+    margin-left: 70px;
+    margin-top: -20px;
+    animation: fade-down 1.5s;
 }
 .headers {
     padding-top: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
-    padding-left: 100px;
+    padding-left: 190px;
     font-size: 64px;
+    font-family: Arial, Helvetica, sans-serif; 
+    animation: fade-down 1.5s;
 }
 
 .headers2 {
   padding-top: 0px;
   padding-right: 0px;
   padding-bottom: 0px;
-  padding-left: 100px;
+  padding-left: 175px;
   font-size: 48px;
+  font-family: Arial, Helvetica, sans-serif; 
 }
 
-.img1 { 
-    width: 100%;
+.logo { 
+    width: 3%;
     height: auto;
-    opacity: 0.9;
-    padding: 0px 50px 0px 100px;
+    opacity: 1;
+    padding: 0px 0px 0px 56px; 
+    animation: fade-down 2s;
 }
-
+/* 56 */
 .original-size {
   width: 100;
   height: 100;
 }
 
-.square {
-    height: 200px;
-    width: 500px;
-    background-color: #222;
-    opacity: 0.7;
-    position: absolute;
-    bottom: -100px;
-    right: 16px;
+.image1 {
+  animation: fade-down 2s 0.2s backwards;
 }
 .container{
   display:flex;
@@ -97,7 +109,7 @@
   position: relative;
   display:flex;
   justify-content: center;
-  padding-top: 36px;
+  padding-top: 53px;
 }
 .image-container{
   display: flex;
@@ -107,4 +119,36 @@
 .image-container img {
   width: 100%;
   height: auto;
+}
+
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+.center {
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  opacity:0.7;
+  font-family: Arial, Helvetica, sans-serif; 
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition:  all 2s ease;
+}
+
+.reveal.active{
+  transform: translateY(0px);
+  opacity: 1;
 }
